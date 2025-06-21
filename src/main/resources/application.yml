@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  tomcat:
+    keep-alive-timeout: 100s
+    connection-timeout: 60000
+  error:
+    path: /error
+  servlet:
+    context-path: /api
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+jasypt:
+  key: ${JASYPT_PASSWORD}
+
+spring:
+  application:
+    name: flow-test
+  datasource:
+    url: ENC(0SVKxQ8dD+b+SFS6+yQgK05cpHksj+13/XefkrxtNHlXJQPuyI9hmDYEi/85yoamAyutYbeiBpRbHJQgeOUwdw==)
+    driver-class-name: org.postgresql.Driver
+    username: ENC(83ZjhEjnTjF8/+H7FE771Q==)
+    password: ENC(83ZjhEjnTjF8/+H7FE771Q==)
+    hikari:
+      connection-timeout: 3000
+      validation-timeout: 3000
+      minimum-idle: 5
+      max-lifetime: 240000
+      maximum-pool-size: 20
+      idle-timeout: 10000
+
+mybatis:
+  type-aliases-package: com.flow.test.domain
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

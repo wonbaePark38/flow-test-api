@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.flow.test.domain.extension.dao.RestrictFileDao">
+    <insert id="createResExtention" parameterType="com.flow.test.domain.extension.record.ExtensionInfo">
+        INSERT INTO block_file_extensions(
+            ext_name,
+            ext_type)
+        VALUES (
+            #{extName},
+            #{extType})
+    </insert>
+
+    <delete id="delResExtention" parameterType="java.lang.String">
+        DELETE FROM block_file_extensions
+         WHERE ext_name = #{extName}
+    </delete>
+
+    <select id="getResExtentionList">
+        SELECT ext_name,
+               ext_type
+          FROM block_file_extensions
+    </select>
+</mapper>
