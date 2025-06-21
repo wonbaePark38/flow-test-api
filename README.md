@@ -1,6 +1,6 @@
 # 📁 파일 확장자 차단 프로젝트
 
-HTML/CSS/JavaScript 프론트엔드와 Spring Boot 백엔드로 구성된 확장자 차단 관리 시스템입니다.  
+HTML/CSS/JavaScript 프론트엔드와 Spring Boot 백엔드로 구성된 확장자차단 관리 프로젝트입니다.  
 사용자는 고정 확장자와 커스텀 확장자를 구분하여 설정하고, 이를 API 서버를 통해 DB에 저장/삭제할 수 있습니다.
 
 ---
