@@ -14,7 +14,8 @@ import java.util.List;
 
 /**
  * 1. 체크박스/추가버튼 클릭했을때 db insert
- * 2.
+ * 2. 체크박스 해제/삭제버튼 클릭했을때 db delete
+ * 3. 전체 리스트 조회
  */
 
 /**
@@ -28,7 +29,7 @@ public class RestrictFileController {
     private final RestrictFileService restrictFileService;
     /**
      * author: 박원배
-     * desc: 제한확장자 추가
+     * desc: 제한확장자 조회
      * @return 제한확장자 리스트
      */
     @GetMapping(value = "/fix/extensions", produces = MediaType.APPLICATION_JSON_VALUE)
